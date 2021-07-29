@@ -1,6 +1,22 @@
-const main = document.getElementById("main")
-main.remove()
+let element = document.createElement('div') 
 
-const newHeader = document.createElement("h1");
-newHeader.id = "victory";
-newHeader.innerHTML = "Fruit Poops is the champion of fake cereals!";
+document.body.appendChild(element) 
+
+let ul = document.createElement('ul') 
+
+for (let i=0; i < 3; i++) {
+    let li = document.createElement("li")
+    li.innerHTML = (i + 1).toString()
+    ul.appendChild(li)
+    }
+
+element.appendChild(ul)
+
+document.body.remove("main")
+
+let h1 = document.createElement("h1")
+h1.id = "victory"
+let newHeader = document.head.appendChild(h1)
+
+// let newHeader = document.querySelector('h1#victory')
+newHeader.innerHTML = "is the champion"
